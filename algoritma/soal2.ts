@@ -8,12 +8,12 @@ const sentence = "Saya sangat senang mengerjakan soal algoritma"
 longest(sentence) 
 // mengerjakan: 11 character */
 
-const test = "Saya sangat senang mengerjakan soal algoritma"
+const testSentence1: string = "Saya sangat senang mengerjakan soal algoritma"
 
-const findLongestCount = (sentence) => {
-    let word = "", temporary = ""
+const findLongestCount = (sentence: string): string => {
+    let word: string = "", temporary: string = ""
     
-    sentence.split("").forEach((el, i) => {
+    sentence.split("").forEach((el: string, i: number) => {
         if (el == " " || i == sentence.length) {
             if (temporary.length > word.length) word = temporary
 
@@ -26,4 +26,4 @@ const findLongestCount = (sentence) => {
     return `${word}: ${word.length} character`
 }
 
-console.log(findLongestCount(test));
+console.log(findLongestCount(testSentence1));

@@ -10,13 +10,13 @@ diagonal kedua = 0 + 5 + 7 = 12
 maka hasilnya adalah 15 - 12 = 3
 ``` */
 
-const matrix = [[1, 2, 0], [4, 5, 6], [7, 8, 9]]
+const matrix: Array<number>[] = [[1, 2, 0], [4, 5, 6], [7, 8, 9]]
 
-const sumDiagonally = (arr) => {
-    let diagonal1 = 0, diagonal2 = 0
+const sumDiagonally = (arr: Array<number>[]): number => {
+    let diagonal1: number = 0, diagonal2: number = 0
 
-    arr.forEach((el, i) => {
-        el.forEach((val, index) => {
+    arr.forEach((el: number[], i: number) => {
+        el.forEach((val: number, index: number) => {
             index == i ? diagonal1 += val : null
             index == el.length - 1 - i ? diagonal2 += val : null
         })
